@@ -1,2 +1,4 @@
 # Tatu-Project
-K12 online education products 
+
+Tatu课堂为一款K12在线教育产品，其中本人主要参与PC端管理后台页面的开发，实现的功能主要有：
+教师的基本信息及审核，教师和学生的双向反馈，学生课程的详细信息等。
