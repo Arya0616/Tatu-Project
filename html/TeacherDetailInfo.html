@@ -1,0 +1,536 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>你的标题</title>
+
+
+    <!-- Amaze UI CSS -->
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../public-js/jquery-3.2.1.min.js"></script>
+
+
+</head>
+<body>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+    以获得更好的体验！</p>
+<![endif]-->
+
+<!--topbar-->
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <strong>TaTu课堂</strong>
+        <small>后台管理系统</small>
+    </div>
+</header>
+
+
+<div class="am-cf admin-main">
+    <!--sidebar-->
+    <div class="admin-sidebar am-offcanvas" id="admin-offcanvas" style="overflow: hidden">
+        <div class="am-offcanvas-bar admin-offcanvas-bar" style="overflow: hidden;">
+            <ul class="am-list admin-sidebar-list">
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}">
+                        <span class="am-icon-home"></span>
+                        &nbsp;教学管理
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav">
+                        <li>
+                            <a href="TeacherList.html">
+                                <span class="am-icon-list"></span>
+                                &nbsp;教师列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="Complaint.html">
+                        <span class="am-icon-comment"></span>
+                        &nbsp;投诉查看
+                    </a>
+                </li>
+
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav3'}">
+                        <span class="am-icon-check-circle"></span>
+                        &nbsp;教师信息审核
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav3">
+                        <li>
+                            <a href="TeacherExamined.html">
+                                <span class="am-icon-check"></span>
+                                &nbsp;已审核
+                            </a>
+                        </li>
+                        <li>
+                            <a href="TeacherNotExamined.html">
+                                <span class="am-icon-circle-o"></span>
+                                &nbsp;未审核
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav4'}">
+                        <span class="am-icon-user"></span>
+                        &nbsp;我的账户
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav4">
+                        <li>
+                            <a href="ChangePassword.html">
+                                <span class="am-icon-unlock"></span>
+                                &nbsp;修改密码
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="am-icon-sign-out"></span>
+                                &nbsp;注销
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="admin-content">
+        <!--教师详情-->
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf">
+                <strong class="am-text-primary am-text-lg">教师详情</strong>
+            </div>
+        </div>
+        <hr>
+        <div class="am-u-sm-12">
+            <table class="am-table am-table-bordered am-table-striped am-table-compact am-table-centered">
+                <tbody>
+                <tr>
+                    <td>姓名：
+                        <span>××</span>
+                    </td>
+                    <td>年龄:
+                        <span>25</span>
+                    </td>
+                    <td>联系方式:
+                        <span>188555522222</span>
+                    </td>
+
+                    <td rowspan="6" style="width: 160px">
+                        <img src="" width="160px;">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>性别:
+                        <span>女</span>
+                    </td>
+                    <td>上课总数：
+                        <span>50</span>
+                    </td>
+                    <td>当前学生人数:
+                        <span>20</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>身份证：
+                        <span>××××××××××××××××××</span>
+                    </td>
+                    <td>希望教学的课：
+                        <span>数学</span>
+                    </td>
+                    <td>求学履历:
+                        <span>本科</span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>教学年级：
+                        <span>小学/</span>
+                        <span>初中/</span>
+                        <span>高中</span>
+                    </td>
+                    <td >课程类型：
+                        <span>辅导课/</span>
+                        <span>教学课</span>
+                    </td>
+                    <td >上课地点：
+                        <span>××××××××××</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2" class="am-text-middle">时薪要求</td>
+                    <td colspan="2">教学课:
+                        <span>××</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">辅导课:
+                        <span>××</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="5" class="am-text-middle">评分</td>
+                    <td colspan="3">亲和力:
+                        <span>××××××××××</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">教学态度：
+                        <span>××××××××××</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">准时程度：
+                        <span>××××××××××</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">语音速度：
+                        <span>××××××××××</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">教学质量：
+                        <span>××××××××××</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="7" class="am-text-middle">上课时间</td>
+                    <td colspan="3">星期一：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期三：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期三：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期四：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期五：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期六：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期日：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!--名下学生-->
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf">
+                <strong class="am-text-primary am-text-lg">名下学生</strong>
+            </div>
+        </div>
+        <hr>
+        <div class="am-g" style="margin-top: 30px;">
+            <div class="am-u-sm-12">
+                <form class="am-form">
+                    <table class="am-table am-table-striped am-table-hover table-main">
+                        <thead>
+                        <tr >
+                            <th>姓名</th>
+                            <th>年级</th>
+                            <th>已上课时数</th>
+                            <th>详情</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李四</td>
+                            <td>初二</td>
+                            <td>18</td>
+                            <td>
+                                <div class="am-btn-toolbar">
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary">
+                                            <a href="ClassDetail.html">详情</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="am-cf">
+                        <div class="am-fr">
+                            <ul class="am-pagination">
+                                <li class="am-disabled">
+                                    <a href="#">&lt;&lt;</a>
+                                </li>
+                                <li class="am-active">
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">&gt;&gt;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+
+<script src="../public-js/amazeui.min.js"></script>
+<script src="../public-js/amazeui.ie8polyfill.min.js"></script>
+</body >
+
+</html>

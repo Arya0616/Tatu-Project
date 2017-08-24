@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../public-js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+    以获得更好的体验！</p>
+<![endif]-->
+
+<!--topbar-->
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <strong>TaTu课堂</strong>
+        <small>后台管理系统</small>
+    </div>
+</header>
+
+<!--content-->
+
+<div class="am-cf admin-main">
+    <div class="admin-content">
+        <div style="width: 55%;margin: 10% auto;">
+            <form class="am-form am-form-horizontal" method="post" id="myForm" style="width:55%;margin:0 auto;border: 1px solid #E0E0E0; padding:40px 0;">
+
+                <h1 style="text-align: center">登录</h1>
+                <div class="am-form-group">
+                    <label for="" class="am-u-sm-2 am-form-label" style="width: 25%">用户名</label>
+                    <div class="am-u-sm-10" style="width: 75%">
+                        <input type="text" id="" minlength="2" placeholder="请输入用户名（至少 2 个字符）" required name="">
+                    </div>
+                </div>
+
+                <div class="am-form-group">
+                    <label for="" class="am-u-sm-2 am-form-label" style="width: 25%">密码</label>
+                    <div class="am-u-sm-10" style="width: 75%">
+                        <input type="password" id="" minlength="6" maxlength="8" placeholder="请输入密码" required name="">
+                    </div>
+                </div>
+
+                <div class="am-form-group">
+                    <div class="am-u-sm-10 " style="margin-left: 180px;">
+                        <button type="submit" class="am-btn am-btn-default" >提交登录</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="../public-js/amazeui.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+//表单验证
+        $("#myForm").validator({
+            submit : function() {
+                var formValidity = this.isFormValid();
+                if (formValidity) {
+                    login();
+                } else {
+                    alert("失败");
+                    // 验证失败的逻辑
+                }
+                //阻止原生form提交
+                return false;
+            }
+        });
+        function login(){
+            $.ajax({
+                url: "login",
+                data:$("#myForm").serialize(),
+                dataType: "json",
+                type: "POST",
+                success: function(data){
+                    if(data.code==0){
+                        self.location='TeachManagement.jsp';
+                    }else if(data.code==1){
+                        alert("登录失败");
+                    }else{
+                        alert(-1);
+                    }
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>

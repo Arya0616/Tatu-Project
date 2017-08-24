@@ -1,0 +1,291 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>你的标题</title>
+
+
+    <!-- Amaze UI CSS -->
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../public-js/jquery-3.2.1.min.js"></script>
+
+
+</head>
+<body>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+    以获得更好的体验！</p>
+<![endif]-->
+
+<!--topbar-->
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <strong>TaTu课堂</strong>
+        <small>后台管理系统</small>
+    </div>
+</header>
+
+
+<div class="am-cf admin-main">
+    <!--sidebar-->
+    <div class="admin-sidebar am-offcanvas" id="admin-offcanvas" style="overflow: hidden">
+        <div class="am-offcanvas-bar admin-offcanvas-bar" style="overflow: hidden;">
+            <ul class="am-list admin-sidebar-list">
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}">
+                        <span class="am-icon-home"></span>
+                        &nbsp;教学管理
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav">
+                        <li>
+                            <a href="TeacherList.html">
+                                <span class="am-icon-list"></span>
+                                &nbsp;教师列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="Complaint.html">
+                        <span class="am-icon-comment"></span>
+                        &nbsp;投诉查看
+                    </a>
+                </li>
+
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav3'}">
+                        <span class="am-icon-check-circle"></span>
+                        &nbsp;教师信息审核
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav3">
+                        <li>
+                            <a href="TeacherExamined.html">
+                                <span class="am-icon-check"></span>
+                                &nbsp;已审核
+                            </a>
+                        </li>
+                        <li>
+                            <a href="TeacherNotExamined.html">
+                                <span class="am-icon-circle-o"></span>
+                                &nbsp;未审核
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav4'}">
+                        <span class="am-icon-user"></span>
+                        &nbsp;我的账户
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav4">
+                        <li>
+                            <a href="ChangePassword.html">
+                                <span class="am-icon-unlock"></span>
+                                &nbsp;修改密码
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="am-icon-sign-out"></span>
+                                &nbsp;注销
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="admin-content">
+        <!--课程详情-->
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf">
+                <strong class="am-text-primary am-text-lg">课程详情</strong>
+            </div>
+        </div>
+        <hr>
+        <div class="am-u-sm-12">
+            <table class="am-table am-table-bordered am-table-striped am-table-compact am-table-centered">
+                <tbody>
+                    <tr>
+                        <td>课程：
+                            <span>英语</span>
+                        </td>
+                        <td>上课时间：
+                            <span>星期一</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>单价：
+                            <span>50</span>
+                        </td>
+                        <td>学生付款课时数：
+                            <span>20</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">教学计划：
+                            <span>............................................</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">学生计划：
+                            <span>............................................</span>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <!--评价详情-->
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf">
+                <strong class="am-text-primary am-text-lg">评价详情</strong>
+            </div>
+        </div>
+        <hr>
+        <div class="am-u-sm-12">
+            <table class="am-table am-table-bordered am-table-striped am-table-compact am-table-centered">
+                <tbody>
+                    <tr>
+                        <td>课时数</td>
+                        <td colspan="6">教师评价</td>
+                        <td colspan="5">学生评价</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4" class="am-text-middle">1</td>
+                        <!--教师评价-->
+                        <td>学习情况</td>
+                        <td>学习内容</td>
+                        <td>课堂表现</td>
+                        <td>领悟力</td>
+                        <td>专心程度</td>
+                        <td>互动积极性</td>
+
+                        <!--学生评价-->
+                        <td>语音语速</td>
+                        <td>准时程度</td>
+                        <td>亲和力</td>
+                        <td>教学态度</td>
+                        <td>我的得分</td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>8</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="6" rowspan="2">评语：
+                            <span>
+                                ................................................<br>
+                                ................................................
+                            </span>
+                        </td>
+                        <td colspan="6" rowspan="2">评语：
+                            <span>
+                                ................................................<br>
+                                ................................................
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="am-u-sm-12">
+            <table class="am-table am-table-bordered am-table-striped am-table-compact am-table-centered">
+                <tbody>
+                <tr>
+                    <td>课时数</td>
+                    <td colspan="6">教师评价</td>
+                    <td colspan="5">学生评价</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4" class="am-text-middle">2</td>
+                    <!--教师评价-->
+                    <td>学习情况</td>
+                    <td>学习内容</td>
+                    <td>课堂表现</td>
+                    <td>领悟力</td>
+                    <td>专心程度</td>
+                    <td>互动积极性</td>
+
+                    <!--学生评价-->
+                    <td>语音语速</td>
+                    <td>准时程度</td>
+                    <td>亲和力</td>
+                    <td>教学态度</td>
+                    <td>我的得分</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>8</td>
+                </tr>
+
+                <tr>
+                    <td colspan="6" rowspan="2">评语：
+                        <span>
+                                ................................................<br>
+                                ................................................
+                            </span>
+                    </td>
+                    <td colspan="6" rowspan="2">评语：
+                        <span>
+                                ................................................<br>
+                                ................................................
+                            </span>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+<script src="../public-js/amazeui.min.js"></script>
+<script src="../public-js/amazeui.ie8polyfill.min.js"></script>
+</body >
+
+</html>

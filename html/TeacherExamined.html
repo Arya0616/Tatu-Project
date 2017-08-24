@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../public-js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+    以获得更好的体验！</p>
+<![endif]-->
+
+<!--topbar-->
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <strong>TaTu课堂</strong>
+        <small>后台管理系统</small>
+    </div>
+</header>
+
+
+<div class="am-cf admin-main">
+    <!--sidebar-->
+    <div class="admin-sidebar am-offcanvas" id="admin-offcanvas" style="overflow: hidden">
+        <div class="am-offcanvas-bar admin-offcanvas-bar" style="overflow: hidden;">
+            <ul class="am-list admin-sidebar-list">
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}">
+                        <span class="am-icon-home"></span>
+                        &nbsp;教学管理
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav">
+                        <li>
+                            <a href="TeacherList.html">
+                                <span class="am-icon-list"></span>
+                                &nbsp;教师列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="Complaint.html">
+                        <span class="am-icon-comment"></span>
+                        &nbsp;投诉查看
+                    </a>
+                </li>
+
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav3'}">
+                        <span class="am-icon-check-circle"></span>
+                        &nbsp;教师信息审核
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav3">
+                        <li>
+                            <a href="TeacherExamined.html">
+                                <span class="am-icon-check"></span>
+                                &nbsp;已审核
+                            </a>
+                        </li>
+                        <li>
+                            <a href="TeacherNotExamined.html">
+                                <span class="am-icon-circle-o"></span>
+                                &nbsp;未审核
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="admin-parent">
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav4'}">
+                        <span class="am-icon-user"></span>
+                        &nbsp;我的账户
+                        <span class="am-icon-angle-right am-fr am-margin-right"></span>
+                    </a>
+                    <ul class="am-list admin-sidebar-sub am-collapse " id="collapse-nav4">
+                        <li>
+                            <a href="ChangePassword.html">
+                                <span class="am-icon-unlock"></span>
+                                &nbsp;修改密码
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="am-icon-sign-out"></span>
+                                &nbsp;注销
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--content-->
+    <div class="admin-content ">
+        <!--基本信息-->
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf">
+                <strong class="am-text-primary am-text-lg">基本信息</strong>
+            </div>
+        </div>
+        <hr>
+        <div class="am-u-sm-12">
+            <table class="am-table am-table-bordered am-table-striped am-table-compact am-table-centered">
+                <tbody>
+                <tr>
+                    <td>姓名：
+                        <span>××</span>
+                    </td>
+                    <td>联系方式:
+                        <span>188555522222</span>
+                    </td>
+                    <td>性别:
+                        <span>女</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>年龄:
+                        <span>25</span>
+                    </td>
+                    <td>身份证：
+                        <span>××××××××××××××××××</span>
+                    </td>
+                    <td >上课地点：
+                        <span>××××××××××</span>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>教学年级：
+                        <span>小学/</span>
+                        <span>初中/</span>
+                        <span>高中</span>
+                    </td>
+                    <td>希望教学的课：
+                        <span>数学</span>
+                    </td>
+                    <td>求学履历:
+                        <span>本科</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">审核状态：
+                        <span>拒绝</span>
+                        <span>通过</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2" class="am-text-middle">时薪要求</td>
+                    <td colspan="2">教学课:
+                        <span>××</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">辅导课:
+                        <span>××</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="7" class="am-text-middle">上课时间</td>
+                    <td colspan="3">星期一：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期三：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期三：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期四：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期五：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期六：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">星期日：
+                        <span>上午</span>
+                        <span>下午</span>
+                        <span>晚上</span>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!--照片审核-->
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf">
+                <strong class="am-text-primary am-text-lg">照片审核</strong>
+            </div>
+        </div>
+        <hr>
+
+        <div class="am-u-sm-12">
+            <table class="am-table am-table-bordered am-table-striped am-table-compact am-table-centered">
+                <tbody>
+                <tr>
+                    <td class="am-text-middle" height="200px;" width="40%">学历证明图片</td>
+                    <td height="200px;">
+                        <img src="" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="am-text-middle" height="200px;" width="40%">身份证正面</td>
+                    <td height="200px;">
+                        <img src="" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="am-text-middle" height="200px;" width="40%">身份证背面</td>
+                    <td height="200px;">
+                        <img src="" alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="am-text-middle" height="200px;" width="40%">教师资格证图片</td>
+                    <td height="200px;">
+                        <img src="" alt="">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../public-js/amazeui.min.js"></script>
+</body>
+</html>
